@@ -10,16 +10,16 @@ Additional aspects include inverting the velocity of physics objects, ensuring t
 I have built this project to work with Unity physics objects out of the box. Any object with a Rigidbody attached that is being moved purely by physics should work with these portals (once they are tagged as teleportable) without any additional scripting or setup.
 
 ## Known Bugs/Issues
-    Given the nature of the challenge, there are a few bugs that I decided to leave alone rather than spending more time on the project.
+Given the nature of the challenge, there are a few bugs that I decided to leave alone rather than spending more time on the project.
 
 ### Mirror Rotation
-    In certain situations, the relative rotation of the "mirrored" objects gets messed up, breaking the illusion of portal mechanics. This seems to happen most often when the portals are opposite each other but one is horizontally aligned and one is vertically aligned.
+In certain situations, the relative rotation of the "mirrored" objects gets messed up, breaking the illusion of portal mechanics. This seems to happen most often when the portals are opposite each other but one is horizontally aligned and one is vertically aligned.
 
 ### Portal Camera Obstructions
-    Because the portal's visual is created by a camera, it is possible for objects to come between the camera and the portal, which are then drawn onto the texture of the other portal. The solution to this problem is to modify the portal camera's near-clipping plane so that it starts where the portal is and only draws things on the other side. However, in Unity you can only easily modify the distance of the near-clipping plane, not the rotation. Modifying the rotation involves using matrices, but I was unable to figure this out in the time I allotted to the challenge.
+Because the portal's visual is created by a camera, it is possible for objects to come between the camera and the portal, which are then drawn onto the texture of the other portal. The solution to this problem is to modify the portal camera's near-clipping plane so that it starts where the portal is and only draws things on the other side. However, in Unity you can only easily modify the distance of the near-clipping plane, not the rotation. Modifying the rotation involves using matrices, but I was unable to figure this out in the time I allotted to the challenge.
 
 ### Shoddy Character Controller
-    I wanted to set up this project to work with any Unity physics object "out of the box", and I believe I achieved that. I did not get around to writing a character controller to work with this system, so the character controller in use is a simple physics-based affair that is... not good. It works with the portals, but if this was a game I would be rewriting the character controller.
+I wanted to set up this project to work with any Unity physics object "out of the box", and I believe I achieved that. I did not get around to writing a character controller to work with this system, so the character controller in use is a simple physics-based affair that is... not good. It works with the portals, but if this was a game I would be rewriting the character controller.
 
 ## How to Play
 
